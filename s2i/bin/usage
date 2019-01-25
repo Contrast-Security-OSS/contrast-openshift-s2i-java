@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cat <<EOF
+Use this s2i project to help install the Contrast agent into your Spring Boot app to launch on Openshift
+
+s2i build git@github.com:Contrast-Security-OSS/vulnerable-spring-boot-application.git Contrast-Security-OSS/contrast-openshift-s2i-java --runtime-artifact=/opt/app-root/src/target vulnerable-spring-boot-application
+
+Then run with:
+docker run -p 8080:8080 vulnerable-spring-boot-application
+EOF
