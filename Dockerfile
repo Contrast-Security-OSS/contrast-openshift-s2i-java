@@ -1,4 +1,4 @@
-FROM centos/s2i-core-centos7
+FROM fedora:latest
 
 EXPOSE 8080
 
