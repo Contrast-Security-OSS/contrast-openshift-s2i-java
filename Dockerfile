@@ -7,10 +7,15 @@ ENV JAVA_VERSON=1.8.0 \
     JAVA_HOME=/usr/lib/jvm/java \
     MAVEN_HOME=/usr/share/maven
 
-LABEL io.k8s.description="Platform for building and running Spring Boot applications" \
-      io.k8s.display-name="Spring Boot Maven 3" \
-      io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,java,java8,maven,maven3,springboot"
+LABEL io.openshift.expose-services="8080:http" \
+      io.openshift.tags="builder,java,java8,maven,maven3,springboot" \
+      name="Contrast Security S2i Demo" \
+      vendor="Contrast Security" \
+      version="1.1" \
+      release="2" \
+      run='docker run -e CONTRAST_URL -e CONTRAST_ORGANIZATION_ID -e CONTRAST_API_KEY -e CONTRAST_AUTHORIZATION  -p 8080:8080 vulnerable-spring-boot-application' \
+      summary="Contrast Security S2i Demo" \
+      description="Contrast Security S2i Demo" 
 
 RUN yum install -y curl java-$JAVA_VERSON-openjdk-devel && \
     yum clean all
