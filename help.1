@@ -1,0 +1,23 @@
+
+CONTRAST SECURITY OPENSHIFT DEMO
+
+contrast-openshift-s2i-java
+
+DESCRIPTION
+
+A demonstration of how to use the Java agent in conjunction with Openshift S2i image creation.
+
+USAGE
+
+s2i build git@github.com:Contrast-Security-OSS/vulnerable-spring-boot-application.git contrast/contrast-openshift-s2i-java --runtime-artifact=/opt/app-root/src/target --runtime-image=contrast/contrast-s2i-jre vulnerable-spring-boot-application
+
+ENVIRONMENT VARIABLES
+
+* CONTRAST_API_KEY
+* CONTRAST_URL
+* CONTRAST_AUTHORIZATION
+* CONTRAST_ORGANIZATION_ID
+
+HISTORY
+
+10-Feb-2019 Initial release
