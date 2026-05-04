@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel7:latest
+FROM registry.access.redhat.com/rhel7:latest@sha256:88d3c02e125d000a6a2c17acf43eed5b8c8f2c67b41cfe8c49a69432057e018d
 
 EXPOSE 8080
 
